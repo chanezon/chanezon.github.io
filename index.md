@@ -1,5 +1,5 @@
 ---
-title: My Blog
+title: My new Blog
 layout: default
 ---
 
