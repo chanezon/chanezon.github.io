@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "A few papers and posts I found interesting to read in December"
+tags: AI models benchmarks
 ---
 
 During the holidays I've read a few AI blog posts and papers. The following are worth a read:
