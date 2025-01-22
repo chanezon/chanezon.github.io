@@ -1,52 +1,6 @@
-remote_theme: "mmistakes/minimal-mistakes@4.14.2"
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
-site:
-  title: "Chanezon on Software"
-  name: "Patrick Chanezon"
-  description: "Patrick Chanezon on software development, cloud, containers and developer relations"
-  url: "https://blog.chanezon.com"
-plugins:
-  - jekyll-include-cache
-search: true
-twitter:
-  username: "chanezon"
-author:
-  name: "Patrick Chanezon"
-  avatar: "/assets/images/bio-photo.jpg"
-  bio: "Devrel"
-  location: "San Francisco"
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/chanezon"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/chanezon"
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: false
-      comments: false
-      share: true
-      related: false
-category_archive:
-  type: jekyll-archives
-  path: /categories/
-tag_archive:
-  type: jekyll-archives
-  path: /tags/
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/      
+title: "Chanezon on AI"
+logo: /assets/img/logo.png
+description: "Patrick Chanezon on AI, software development, cloud, containers and developer relations"
+show_downloads: false
+theme: jekyll-theme-minimal
+   
