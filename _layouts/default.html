@@ -24,6 +24,17 @@
       <section>
 
       {{ content }}
+      {% if page.isindex %}
+      <ul>
+        {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            {{ post.content }}
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}      
+
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
