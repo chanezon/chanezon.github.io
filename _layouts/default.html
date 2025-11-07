@@ -23,15 +23,11 @@
 
       {{ content }}
       {% if page.isindex %}
-      <ul>
         {% for post in site.posts %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a><br/>
-            <small>{{ post.date | date: "%-d %B %Y" }}</small>
+            <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            <p><b>{{ post.date | date: "%-d %B %Y" }}</b></p>
             {{ post.content }}
-          </li>
         {% endfor %}
-      </ul>
       {% endif %}      
 
       </section>
