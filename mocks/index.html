@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chanezon on AI - Blog Design Options</title>
+    <title>Chanezon on AI - 13 Design Patterns</title>
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -13,13 +12,12 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f5f5f5;
         }
 
-        /* Navigation between designs */
+        /* Fixed Navigation */
         .design-nav {
             position: fixed;
             top: 0;
@@ -27,24 +25,27 @@
             right: 0;
             background: #000;
             color: #fff;
-            padding: 1rem 2rem;
+            padding: 0.75rem 1.5rem;
             z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
 
         .design-nav h2 {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .design-nav nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .design-nav nav a {
             color: #fff;
             text-decoration: none;
-            margin-left: 1.5rem;
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             transition: opacity 0.2s;
         }
 
@@ -52,656 +53,1232 @@
             opacity: 0.7;
         }
 
-        /* Design Section Container */
         .design-section {
-            margin-top: 60px;
+            margin-top: 80px;
             min-height: 100vh;
-            background: #fff;
             border-bottom: 4px solid #000;
         }
 
         .design-label {
             background: #000;
             color: #fff;
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
         }
 
         .design-label h3 {
-            font-size: 2rem;
+            font-size: 1.75rem;
             margin-bottom: 0.5rem;
         }
 
         .design-label p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             opacity: 0.8;
         }
 
-        /* ============================================
-           DESIGN 1: CLASSIC MINIMAL (Medium-inspired)
-           ============================================ */
-        .design-1 {
-            background: #fff;
-            padding: 3rem 1rem;
+        /* ===================
+           1. FLAT DESIGN
+           =================== */
+        .flat {
+            background: #ecf0f1;
+            padding: 3rem 2rem;
         }
 
-        .design-1 .container {
-            max-width: 680px;
+        .flat .container {
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .design-1 header {
+        .flat header {
+            background: #3498db;
+            color: #fff;
+            padding: 3rem 2rem;
             text-align: center;
-            padding: 3rem 0 2rem;
-            border-bottom: 1px solid #e5e5e5;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
-        .design-1 .header-image {
-            width: 180px;
-            height: 180px;
+        .flat h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .flat .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .flat .social-links {
+            margin-top: 1.5rem;
+        }
+
+        .flat .social-links a {
+            display: inline-block;
+            background: #2980b9;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            font-weight: 600;
+        }
+
+        .flat article {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .flat article h2 {
+            color: #2c3e50;
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .flat .post-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .flat .post-image {
+            width: 100%;
+            height: auto;
+            margin: 1.5rem 0;
+        }
+
+        /* ===================
+           2. NEUMORPHISM
+           =================== */
+        .neumorphism {
+            background: #e0e5ec;
+            padding: 3rem 2rem;
+        }
+
+        .neumorphism .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .neumorphism header {
+            background: #e0e5ec;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: 30px;
+            box-shadow: 9px 9px 16px rgba(163,177,198,0.6), 
+                        -9px -9px 16px rgba(255,255,255, 0.5);
+        }
+
+        .neumorphism .header-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            box-shadow: inset 6px 6px 12px rgba(163,177,198,0.5),
+                        inset -6px -6px 12px rgba(255,255,255,0.7);
+        }
+
+        .neumorphism h1 {
+            font-size: 2.25rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .neumorphism .tagline {
+            color: #546e7a;
+            font-size: 1rem;
+        }
+
+        .neumorphism .social-links {
+            margin-top: 2rem;
+        }
+
+        .neumorphism .social-links a {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            color: #2c3e50;
+            border-radius: 15px;
+            box-shadow: 6px 6px 12px rgba(163,177,198,0.6),
+                        -6px -6px 12px rgba(255,255,255,0.5);
+            transition: all 0.3s;
+        }
+
+        .neumorphism .social-links a:active {
+            box-shadow: inset 4px 4px 8px rgba(163,177,198,0.6),
+                        inset -4px -4px 8px rgba(255,255,255,0.5);
+        }
+
+        .neumorphism article {
+            background: #e0e5ec;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 25px;
+            box-shadow: 9px 9px 16px rgba(163,177,198,0.6),
+                        -9px -9px 16px rgba(255,255,255, 0.5);
+        }
+
+        .neumorphism article h2 {
+            font-size: 1.75rem;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+        }
+
+        .neumorphism .post-date {
+            color: #78909c;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .neumorphism .post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin: 1.5rem 0;
+            box-shadow: 6px 6px 12px rgba(163,177,198,0.4);
+        }
+
+        /* ===================
+           3. SKEUOMORPHISM
+           =================== */
+        .skeuomorphism {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 3rem 2rem;
+        }
+
+        .skeuomorphism .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skeuomorphism header {
+            background: linear-gradient(145deg, #f5f5f5, #e0e0e0);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            border: 3px solid #d0d0d0;
+            box-shadow: 
+                0 10px 20px rgba(0,0,0,0.2),
+                inset 0 1px 0 rgba(255,255,255,0.8),
+                inset 0 -1px 0 rgba(0,0,0,0.1);
+        }
+
+        .skeuomorphism .header-image {
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1.5rem;
+            border: 5px solid #fff;
+            box-shadow: 
+                0 4px 8px rgba(0,0,0,0.3),
+                inset 0 2px 4px rgba(255,255,255,0.5);
         }
 
-        .design-1 h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
-        }
-
-        .design-1 .tagline {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.5;
-            margin-bottom: 1.5rem;
-        }
-
-        .design-1 .social-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-
-        .design-1 .social-links a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .design-1 .social-links a:hover {
-            color: #000;
-        }
-
-        .design-1 article {
-            margin-bottom: 4rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .design-1 article:last-child {
-            border-bottom: none;
-        }
-
-        .design-1 article h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.02em;
-        }
-
-        .design-1 article h2 a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .design-1 article h2 a:hover {
-            opacity: 0.7;
-        }
-
-        .design-1 .post-date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .design-1 .post-content {
-            font-size: 1.05rem;
-            line-height: 1.75;
+        .skeuomorphism h1 {
+            font-size: 2.25rem;
             color: #333;
-        }
-
-        .design-1 .post-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .design-1 .post-image {
-            width: 100%;
-            height: auto;
-            margin: 2rem 0;
-            border-radius: 4px;
-        }
-
-        /* ============================================
-           DESIGN 2: MODERN SWISS TYPOGRAPHY
-           ============================================ */
-        .design-2 {
-            background: #fff;
-            padding: 0;
-        }
-
-        .design-2 .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            min-height: 100vh;
-            gap: 0;
-        }
-
-        .design-2 .sidebar {
-            background: #000;
-            color: #fff;
-            padding: 3rem 2rem;
-            position: sticky;
-            top: 60px;
-            height: calc(100vh - 60px);
-        }
-
-        .design-2 .sidebar h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
+            text-shadow: 0 1px 0 #fff;
             margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
         }
 
-        .design-2 .sidebar .tagline {
-            font-size: 0.85rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            opacity: 0.8;
-        }
-
-        .design-2 .sidebar .header-image {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 2rem;
-            filter: grayscale(100%) contrast(1.2);
-        }
-
-        .design-2 .sidebar nav a {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.85rem;
-            margin-bottom: 0.75rem;
-            transition: opacity 0.2s;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .design-2 .sidebar nav a:hover {
-            opacity: 0.6;
-        }
-
-        .design-2 .main-content {
-            padding: 3rem 4rem;
-            background: #fff;
-        }
-
-        .design-2 article {
-            margin-bottom: 5rem;
-            max-width: 700px;
-        }
-
-        .design-2 article h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .design-2 article h2 a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .design-2 .post-meta {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #999;
-            margin-bottom: 2rem;
-        }
-
-        .design-2 .post-content {
+        .skeuomorphism .tagline {
+            color: #666;
             font-size: 1rem;
-            line-height: 1.8;
-            color: #333;
+            text-shadow: 0 1px 0 #fff;
         }
 
-        .design-2 .post-content p {
+        .skeuomorphism .social-links a {
+            display: inline-block;
+            background: linear-gradient(145deg, #4a90e2, #357abd);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 
+                0 4px 6px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.3),
+                inset 0 -1px 0 rgba(0,0,0,0.2);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .skeuomorphism article {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            padding: 2.5rem;
             margin-bottom: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #e0e0e0;
+            box-shadow: 
+                0 8px 16px rgba(0,0,0,0.2),
+                inset 0 1px 0 rgba(255,255,255,0.8);
         }
 
-        .design-2 .post-image {
+        .skeuomorphism article h2 {
+            font-size: 1.75rem;
+            color: #333;
+            text-shadow: 0 1px 0 #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .skeuomorphism .post-image {
             width: 100%;
             height: auto;
-            margin: 2rem 0;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        /* ============================================
-           DESIGN 3: BRUTALIST MINIMAL
-           ============================================ */
-        .design-3 {
-            background: #fff;
-            padding: 0;
+        /* ===================
+           4. GLASSMORPHISM
+           =================== */
+        .glassmorphism {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 3rem 2rem;
+            position: relative;
         }
 
-        .design-3 .container {
+        .glassmorphism::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../assets/img/blog-header.jpg') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .glassmorphism .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            position: relative;
+            z-index: 1;
         }
 
-        .design-3 header {
-            margin-bottom: 4rem;
-            border: 3px solid #000;
-            padding: 2rem;
+        .glassmorphism header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
-        .design-3 h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            line-height: 1;
+        .glassmorphism .header-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glassmorphism h1 {
+            font-size: 2.5rem;
+            color: #fff;
             margin-bottom: 1rem;
-            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
-        .design-3 .tagline {
-            font-size: 1rem;
-            line-height: 1.5;
-            border-left: 4px solid #000;
-            padding-left: 1rem;
+        .glassmorphism .tagline {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        .glassmorphism .social-links a {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .glassmorphism .social-links a:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .glassmorphism article {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .glassmorphism article h2 {
+            font-size: 1.75rem;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .glassmorphism .post-date {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
             margin-bottom: 1.5rem;
         }
 
-        .design-3 .header-image {
+        .glassmorphism .post-content {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .glassmorphism .post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* ===================
+           5. BRUTALISM
+           =================== */
+        .brutalism {
+            background: #ff0;
+            padding: 3rem 2rem;
+        }
+
+        .brutalism .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .brutalism header {
+            background: #f00;
+            color: #000;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border: 8px solid #000;
+            transform: rotate(-1deg);
+        }
+
+        .brutalism .header-image {
             width: 150px;
             height: 150px;
             object-fit: cover;
-            border: 3px solid #000;
+            margin-bottom: 1.5rem;
+            border: 5px solid #000;
+            filter: grayscale(100%) contrast(1.5);
+        }
+
+        .brutalism h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+        }
+
+        .brutalism .tagline {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .brutalism .social-links a {
+            display: inline-block;
+            background: #00f;
+            color: #fff;
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            border: 5px solid #000;
+            font-weight: 900;
+            text-transform: uppercase;
+            transform: rotate(1deg);
+        }
+
+        .brutalism article {
+            background: #0ff;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 6px solid #000;
+            transform: rotate(0.5deg);
+        }
+
+        .brutalism article:nth-child(odd) {
+            transform: rotate(-0.5deg);
+        }
+
+        .brutalism article h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .brutalism .post-date {
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .brutalism .post-image {
+            width: 100%;
+            height: auto;
+            border: 5px solid #000;
+            margin: 1.5rem 0;
+            filter: grayscale(100%) contrast(1.3);
+        }
+
+        /* ===================
+           6. BENTO UI
+           =================== */
+        .bento {
+            background: #f5f5f5;
+            padding: 3rem 2rem;
+        }
+
+        .bento .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .bento header {
+            background: #fff;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .bento h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .bento .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .bento .card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .bento .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .bento .card.large {
+            grid-column: span 2;
+        }
+
+        .bento .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
             margin-bottom: 1rem;
         }
 
-        .design-3 .social-links {
-            display: flex;
-            gap: 0;
-        }
-
-        .design-3 .social-links a {
-            background: #000;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            font-weight: 700;
-            border-right: 2px solid #fff;
-            transition: all 0.2s;
-        }
-
-        .design-3 .social-links a:hover {
-            background: #fff;
-            color: #000;
-            border: 2px solid #000;
-        }
-
-        .design-3 article {
-            margin-bottom: 4rem;
-            padding: 2rem;
-            border: 2px solid #000;
-            background: #fff;
-        }
-
-        .design-3 article h2 {
-            font-size: 2rem;
-            font-weight: 900;
+        .bento .card h2 {
+            font-size: 1.5rem;
             margin-bottom: 0.5rem;
-            text-transform: uppercase;
         }
 
-        .design-3 article h2 a {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 3px solid #000;
-        }
-
-        .design-3 article h2 a:hover {
-            background: #000;
-            color: #fff;
-        }
-
-        .design-3 .post-date {
+        .bento .card .date {
+            color: #999;
             font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            background: #000;
-            color: #fff;
-            padding: 0.25rem 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .design-3 .post-content {
+        /* ===================
+           7. CLAYMORPHISM
+           =================== */
+        .claymorphism {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fd79a8 100%);
+            padding: 3rem 2rem;
+        }
+
+        .claymorphism .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .claymorphism header {
+            background: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 40px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.1),
+                inset 0 -4px 8px rgba(0,0,0,0.05);
+        }
+
+        .claymorphism .header-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .claymorphism h1 {
+            font-size: 2.25rem;
+            color: #2d3436;
+            margin-bottom: 1rem;
+        }
+
+        .claymorphism .tagline {
+            color: #636e72;
             font-size: 1rem;
-            line-height: 1.7;
         }
 
-        .design-3 .post-content p {
+        .claymorphism .social-links a {
+            display: inline-block;
+            background: #6c5ce7;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(108, 92, 231, 0.3);
+        }
+
+        .claymorphism article {
+            background: #fff;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 35px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.1),
+                inset 0 -4px 8px rgba(0,0,0,0.05);
+        }
+
+        .claymorphism article h2 {
+            font-size: 1.75rem;
+            color: #2d3436;
+            margin-bottom: 0.75rem;
+        }
+
+        .claymorphism .post-date {
+            color: #636e72;
+            font-size: 0.85rem;
             margin-bottom: 1.5rem;
         }
 
-        .design-3 .post-image {
+        .claymorphism .post-image {
             width: 100%;
             height: auto;
-            border: 3px solid #000;
-            margin: 2rem 0;
+            border-radius: 25px;
+            margin: 1.5rem 0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
 
-        /* ============================================
-           DESIGN 4: JAPANESE MINIMAL
-           ============================================ */
-        .design-4 {
+        /* ===================
+           8. EDITORIAL/MAGAZINE
+           =================== */
+        .editorial {
+            background: #fff;
+            padding: 0;
+        }
+
+        .editorial .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .editorial header {
+            padding: 4rem 3rem;
+            border-bottom: 3px solid #000;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .editorial .header-content h1 {
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .editorial .tagline {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .editorial .header-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .editorial .content {
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .editorial article {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .editorial article h2 {
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+
+        .editorial .post-date {
+            font-size: 0.85rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .editorial .post-image {
+            width: 100%;
+            height: auto;
+            margin: 1.5rem 0;
+        }
+
+        .editorial aside {
+            border-left: 1px solid #ddd;
+            padding-left: 2rem;
+        }
+
+        .editorial aside h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ===================
+           9. MATERIAL DESIGN
+           =================== */
+        .material {
             background: #fafafa;
             padding: 0;
         }
 
-        .design-4 .container {
-            max-width: 800px;
+        .material .app-bar {
+            background: #1976d2;
+            color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .material .app-bar h1 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .material .container {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 2rem;
         }
 
-        .design-4 header {
-            text-align: center;
-            margin-bottom: 5rem;
-            padding-bottom: 3rem;
-            position: relative;
-        }
-
-        .design-4 header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 2px;
-            background: #000;
-        }
-
-        .design-4 .header-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 2px;
-            object-fit: cover;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .design-4 h1 {
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-            letter-spacing: 0.05em;
-        }
-
-        .design-4 .tagline {
-            font-size: 0.9rem;
-            line-height: 1.8;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        .design-4 .social-links {
+        .material .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 56px;
+            height: 56px;
+            background: #f50057;
+            border-radius: 50%;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.3);
             display: flex;
-            gap: 2rem;
+            align-items: center;
             justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
         }
 
-        .design-4 .social-links a {
-            color: #000;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: opacity 0.3s;
-            position: relative;
-        }
-
-        .design-4 .social-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: #000;
-            transition: width 0.3s;
-        }
-
-        .design-4 .social-links a:hover::after {
-            width: 100%;
-        }
-
-        .design-4 article {
-            margin-bottom: 5rem;
+        .material article {
             background: #fff;
-            padding: 3rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s;
         }
 
-        .design-4 article h2 {
+        .material article:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .material article h2 {
             font-size: 1.75rem;
             font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #212121;
+        }
+
+        .material .post-date {
+            color: #757575;
+            font-size: 0.875rem;
             margin-bottom: 1rem;
-            letter-spacing: 0.02em;
         }
 
-        .design-4 article h2 a {
-            color: #000;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-
-        .design-4 article h2 a:hover {
-            opacity: 0.6;
-        }
-
-        .design-4 .post-date {
-            font-size: 0.8rem;
-            color: #999;
-            margin-bottom: 2rem;
-            display: block;
-        }
-
-        .design-4 .post-content {
-            font-size: 0.95rem;
-            line-height: 1.9;
-            color: #444;
-        }
-
-        .design-4 .post-content p {
-            margin-bottom: 1.8rem;
-        }
-
-        .design-4 .post-image {
+        .material .post-image {
             width: 100%;
             height: auto;
-            margin: 2rem 0;
-            opacity: 0.95;
+            margin: 1rem 0;
+            border-radius: 4px;
         }
 
-        /* ============================================
-           DESIGN 5: EDITORIAL MAGAZINE STYLE
-           ============================================ */
-        .design-5 {
-            background: #fff;
-            padding: 0;
+        .material .chip {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #e0e0e0;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
         }
 
-        .design-5 .container {
-            max-width: 1200px;
+        /* ===================
+           10. FROSTED MINIMALISM
+           =================== */
+        .frosted {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 3rem 2rem;
+            position: relative;
+        }
+
+        .frosted::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../assets/img/blog-header.jpg') center/cover fixed;
+            opacity: 0.15;
+        }
+
+        .frosted .container {
+            max-width: 800px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        .frosted header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(40px) saturate(150%);
+            -webkit-backdrop-filter: blur(40px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 30px;
+        }
+
+        .frosted .header-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .frosted h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        .frosted .tagline {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .frosted .social-links a {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-weight: 300;
+        }
+
+        .frosted article {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(40px) saturate(150%);
+            -webkit-backdrop-filter: blur(40px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 30px;
+        }
+
+        .frosted article h2 {
+            font-size: 1.75rem;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+        }
+
+        .frosted .post-date {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .frosted .post-content {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+
+        .frosted .post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===================
+           11. GRADIENTED NEOFLAT
+           =================== */
+        .neoflat {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 3rem 2rem;
         }
 
-        .design-5 header {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 4rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e0e0e0;
-            align-items: center;
+        .neoflat .container {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .design-5 .header-content h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.03em;
-        }
-
-        .design-5 .tagline {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #555;
+        .neoflat header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+            padding: 3rem 2rem;
+            text-align: center;
             margin-bottom: 2rem;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
 
-        .design-5 .social-links a {
-            color: #000;
-            text-decoration: none;
-            margin-right: 1.5rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: opacity 0.2s;
-        }
-
-        .design-5 .social-links a:hover {
-            opacity: 0.6;
-        }
-
-        .design-5 .header-image {
-            width: 100%;
-            height: 400px;
+        .neoflat .header-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
             object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 4px solid #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .design-5 .posts-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .design-5 article {
-            margin-bottom: 2rem;
-        }
-
-        .design-5 article h2 {
-            font-size: 1.75rem;
+        .neoflat h1 {
+            font-size: 2.5rem;
             font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 0.75rem;
-        }
-
-        .design-5 article h2 a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .design-5 article h2 a:hover {
-            opacity: 0.7;
-        }
-
-        .design-5 .post-date {
-            font-size: 0.85rem;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
             margin-bottom: 1rem;
-            display: block;
         }
 
-        .design-5 .post-content {
-            font-size: 0.95rem;
-            line-height: 1.7;
+        .neoflat .tagline {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .neoflat .social-links a {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .neoflat article {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 25px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .neoflat article:nth-child(even) {
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+
+        .neoflat article h2 {
+            font-size: 1.75rem;
+            color: #333;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .neoflat .post-date {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .neoflat .post-content {
             color: #444;
         }
 
-        .design-5 .post-content p {
-            margin-bottom: 1.3rem;
+        .neoflat .post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin: 1.5rem 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
-        .design-5 .post-image {
-            width: 100%;
-            height: 250px;
+        /* ===================
+           12. DARK MINIMAL / DARK LUXE
+           =================== */
+        .dark-luxe {
+            background: #0a0a0a;
+            padding: 3rem 2rem;
+        }
+
+        .dark-luxe .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .dark-luxe header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border: 1px solid #333;
+        }
+
+        .dark-luxe .header-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1.5rem;
+            border: 2px solid #d4af37;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 1024px) {
-            .design-2 .grid-container {
-                grid-template-columns: 1fr;
-            }
-
-            .design-2 .sidebar {
-                position: relative;
-                top: 0;
-                height: auto;
-            }
-
-            .design-5 header {
-                grid-template-columns: 1fr;
-            }
-
-            .design-5 .posts-grid {
-                grid-template-columns: 1fr;
-            }
+        .dark-luxe h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
         }
 
+        .dark-luxe .tagline {
+            color: #aaa;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .dark-luxe .social-links a {
+            display: inline-block;
+            background: transparent;
+            color: #d4af37;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            border: 1px solid #d4af37;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            transition: all 0.3s;
+        }
+
+        .dark-luxe .social-links a:hover {
+            background: #d4af37;
+            color: #0a0a0a;
+        }
+
+        .dark-luxe article {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #333;
+        }
+
+        .dark-luxe article h2 {
+            font-size: 1.75rem;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        .dark-luxe .post-date {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        .dark-luxe .post-content {
+            color: #ccc;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .dark-luxe .post-image {
+            width: 100%;
+            height: auto;
+            margin: 1.5rem 0;
+            border: 1px solid #333;
+        }
+
+        /* ===================
+           13. MONOCHROME
+           =================== */
+        .monochrome {
+            background: #fff;
+            padding: 3rem 2rem;
+        }
+
+        .monochrome .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .monochrome header {
+            text-align: center;
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #000;
+        }
+
+        .monochrome .header-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            filter: grayscale(100%) contrast(1.1);
+            border: 3px solid #000;
+        }
+
+        .monochrome h1 {
+            font-size: 2.5rem;
+            color: #000;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .monochrome .tagline {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .monochrome .social-links a {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .monochrome .social-links a:hover {
+            background: #fff;
+            color: #000;
+            border: 2px solid #000;
+        }
+
+        .monochrome article {
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .monochrome article h2 {
+            font-size: 2rem;
+            color: #000;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .monochrome .post-date {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .monochrome .post-content {
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .monochrome .post-image {
+            width: 100%;
+            height: auto;
+            margin: 1.5rem 0;
+            filter: grayscale(100%) contrast(1.1);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .design-nav {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-
             .design-nav nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                gap: 0.5rem;
             }
 
-            .design-1 h1,
-            .design-3 h1 {
-                font-size: 2rem;
+            .editorial header,
+            .editorial .content {
+                grid-template-columns: 1fr;
             }
 
-            .design-5 .header-content h1 {
-                font-size: 2.5rem;
+            .bento .grid {
+                grid-template-columns: 1fr;
             }
 
-            .design-2 .main-content {
-                padding: 2rem 1.5rem;
+            .bento .card.large {
+                grid-column: span 1;
             }
         }
     </style>
@@ -710,106 +1287,32 @@
 
     <!-- Navigation -->
     <div class="design-nav">
-        <h2>Chanezon on AI - Design Options</h2>
+        <h2>13 Design Patterns</h2>
         <nav>
-            <a href="#design-1">Classic Minimal</a>
-            <a href="#design-2">Swiss Typography</a>
-            <a href="#design-3">Brutalist</a>
-            <a href="#design-4">Japanese</a>
-            <a href="#design-5">Editorial</a>
+            <a href="#flat">Flat</a>
+            <a href="#neumorphism">Neumorphism</a>
+            <a href="#skeuomorphism">Skeuomorphism</a>
+            <a href="#glassmorphism">Glassmorphism</a>
+            <a href="#brutalism">Brutalism</a>
+            <a href="#bento">Bento UI</a>
+            <a href="#claymorphism">Claymorphism</a>
+            <a href="#editorial">Editorial</a>
+            <a href="#material">Material</a>
+            <a href="#frosted">Frosted</a>
+            <a href="#neoflat">Neoflat</a>
+            <a href="#dark-luxe">Dark Luxe</a>
+            <a href="#monochrome">Monochrome</a>
         </nav>
     </div>
 
-    <!-- DESIGN 1: CLASSIC MINIMAL -->
-    <div id="design-1" class="design-section design-1">
+    <!-- 1. FLAT DESIGN -->
+    <div id="flat" class="design-section flat">
         <div class="design-label">
-            <h3>Design 1: Classic Minimal</h3>
-            <p>Inspired by Medium - Focus on readability with clean typography and ample whitespace</p>
+            <h3>1. Flat Design</h3>
+            <p>Clean, two-dimensional design with bright colors and no depth effects</p>
         </div>
         <div class="container">
             <header>
-                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
-                <h1>Chanezon on AI</h1>
-                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
-                <div class="social-links">
-                    <a href="https://github.com/chanezon">GitHub</a>
-                    <a href="https://www.linkedin.com/in/chanezon/">LinkedIn</a>
-                </div>
-            </header>
-
-            <article>
-                <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
-                <span class="post-date">7 November 2025</span>
-                <div class="post-content">
-                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful: it requires us to reinvent our jobs as developers, and as a consequence, we also need to reinvent the Developer Relations discipline.</p>
-                    <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents Presentation" class="post-image">
-                    <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
-                </div>
-            </article>
-
-            <article>
-                <h2><a href="#">January AI Reading List</a></h2>
-                <span class="post-date">22 January 2025</span>
-                <div class="post-content">
-                    <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities, with particular focus on reasoning and planning abilities.</p>
-                    <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm Phases" class="post-image">
-                    <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
-                </div>
-            </article>
-        </div>
-    </div>
-
-    <!-- DESIGN 2: MODERN SWISS TYPOGRAPHY -->
-    <div id="design-2" class="design-section design-2">
-        <div class="design-label">
-            <h3>Design 2: Modern Swiss Typography</h3>
-            <p>Grid-based layout with strong typography and systematic organization</p>
-        </div>
-        <div class="grid-container">
-            <aside class="sidebar">
-                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
-                <h1>Chanezon<br>on AI</h1>
-                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
-                <nav>
-                    <a href="#">GitHub</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">About</a>
-                    <a href="#">Archive</a>
-                </nav>
-            </aside>
-            <main class="main-content">
-                <article>
-                    <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
-                    <div class="post-meta">7 November 2025 • DevRel • AI Agents</div>
-                    <div class="post-content">
-                        <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful: it requires us to reinvent our jobs as developers, and as a consequence, we also need to reinvent the Developer Relations discipline.</p>
-                        <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
-                        <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
-                    </div>
-                </article>
-
-                <article>
-                    <h2><a href="#">January AI Reading List</a></h2>
-                    <div class="post-meta">22 January 2025 • Reading List • AI</div>
-                    <div class="post-content">
-                        <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities, with particular focus on reasoning and planning abilities.</p>
-                        <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm" class="post-image">
-                        <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
-                    </div>
-                </article>
-            </main>
-        </div>
-    </div>
-
-    <!-- DESIGN 3: BRUTALIST MINIMAL -->
-    <div id="design-3" class="design-section design-3">
-        <div class="design-label">
-            <h3>Design 3: Brutalist Minimal</h3>
-            <p>Bold typography, strong borders, and high contrast for maximum impact</p>
-        </div>
-        <div class="container">
-            <header>
-                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
                 <h1>Chanezon on AI</h1>
                 <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
                 <div class="social-links">
@@ -817,38 +1320,24 @@
                     <a href="#">LinkedIn</a>
                 </div>
             </header>
-
             <article>
-                <span class="post-date">7 Nov 2025</span>
-                <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
-                <div class="post-content">
-                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful: it requires us to reinvent our jobs as developers, and as a consequence, we also need to reinvent the Developer Relations discipline.</p>
-                    <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
-                    <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
-                </div>
-            </article>
-
-            <article>
-                <span class="post-date">22 Jan 2025</span>
-                <h2><a href="#">January AI Reading List</a></h2>
-                <div class="post-content">
-                    <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities, with particular focus on reasoning and planning abilities.</p>
-                    <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm" class="post-image">
-                    <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
-                </div>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
             </article>
         </div>
     </div>
 
-    <!-- DESIGN 4: JAPANESE MINIMAL -->
-    <div id="design-4" class="design-section design-4">
+    <!-- 2. NEUMORPHISM -->
+    <div id="neumorphism" class="design-section neumorphism">
         <div class="design-label">
-            <h3>Design 4: Japanese Minimal</h3>
-            <p>Zen-inspired design with subtle elegance and emphasis on negative space</p>
+            <h3>2. Neumorphism (Soft UI)</h3>
+            <p>Soft, extruded shapes with subtle shadows creating depth</p>
         </div>
         <div class="container">
             <header>
-                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
                 <h1>Chanezon on AI</h1>
                 <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
                 <div class="social-links">
@@ -856,74 +1345,311 @@
                     <a href="#">LinkedIn</a>
                 </div>
             </header>
-
             <article>
-                <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
-                <span class="post-date">November 7, 2025</span>
-                <div class="post-content">
-                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful: it requires us to reinvent our jobs as developers, and as a consequence, we also need to reinvent the Developer Relations discipline.</p>
-                    <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
-                    <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
-                </div>
-            </article>
-
-            <article>
-                <h2><a href="#">January AI Reading List</a></h2>
-                <span class="post-date">January 22, 2025</span>
-                <div class="post-content">
-                    <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities, with particular focus on reasoning and planning abilities.</p>
-                    <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm" class="post-image">
-                    <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
-                </div>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
             </article>
         </div>
     </div>
 
-    <!-- DESIGN 5: EDITORIAL MAGAZINE STYLE -->
-    <div id="design-5" class="design-section design-5">
+    <!-- 3. SKEUOMORPHISM -->
+    <div id="skeuomorphism" class="design-section skeuomorphism">
         <div class="design-label">
-            <h3>Design 5: Editorial Magazine Style</h3>
-            <p>Two-column magazine layout with visual hierarchy and balanced composition</p>
+            <h3>3. Skeuomorphism</h3>
+            <p>Real-world textures and materials with dimensional effects</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+            <article>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+            </article>
+        </div>
+    </div>
+
+    <!-- 4. GLASSMORPHISM -->
+    <div id="glassmorphism" class="design-section glassmorphism">
+        <div class="design-label">
+            <h3>4. Glassmorphism</h3>
+            <p>Frosted glass effect with transparency and blur</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+            <article>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <div class="post-content">
+                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                </div>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+            </article>
+        </div>
+    </div>
+
+    <!-- 5. BRUTALISM -->
+    <div id="brutalism" class="design-section brutalism">
+        <div class="design-label">
+            <h3>5. Brutalism</h3>
+            <p>Raw, bold, intentionally harsh with primary colors</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+            <article>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+            </article>
+        </div>
+    </div>
+
+    <!-- 6. BENTO UI -->
+    <div id="bento" class="design-section bento">
+        <div class="design-label">
+            <h3>6. Bento UI / Card-Grid Aesthetic</h3>
+            <p>Organized grid layout with card-based components</p>
+        </div>
+        <div class="container">
+            <header>
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+            </header>
+            <div class="grid">
+                <div class="card large">
+                    <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="card-image">
+                    <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                    <div class="date">November 7, 2025</div>
+                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave.</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm" class="card-image">
+                    <h2>AI Reading List</h2>
+                    <div class="date">January 22, 2025</div>
+                    <p>A curated collection of AI papers and articles.</p>
+                </div>
+                <div class="card">
+                    <h2>About</h2>
+                    <p>Patrick Chanezon on AI, software development, cloud, containers and developer relations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. CLAYMORPHISM -->
+    <div id="claymorphism" class="design-section claymorphism">
+        <div class="design-label">
+            <h3>7. Claymorphism</h3>
+            <p>Soft clay-like 3D elements with rounded edges</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+            <article>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+            </article>
+        </div>
+    </div>
+
+    <!-- 8. EDITORIAL/MAGAZINE -->
+    <div id="editorial" class="design-section editorial">
+        <div class="design-label">
+            <h3>8. Editorial / Magazine Style</h3>
+            <p>Print-inspired layout with strong typography</p>
         </div>
         <div class="container">
             <header>
                 <div class="header-content">
                     <h1>Chanezon on AI</h1>
                     <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
-                    <div class="social-links">
-                        <a href="#">GitHub</a>
-                        <a href="#">LinkedIn</a>
-                    </div>
                 </div>
-                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
             </header>
-
-            <div class="posts-grid">
-                <article>
-                    <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
-                    <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
-                    <span class="post-date">November 7, 2025</span>
-                    <div class="post-content">
-                        <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful.</p>
-                        <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm" class="post-image">
-                    <h2><a href="#">January AI Reading List</a></h2>
-                    <span class="post-date">January 22, 2025</span>
-                    <div class="post-content">
-                        <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities.</p>
-                        <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
-                    </div>
-                </article>
+            <div class="content">
+                <main>
+                    <article>
+                        <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                        <div class="post-date">November 7, 2025</div>
+                        <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                        <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+                    </article>
+                </main>
+                <aside>
+                    <h3>Recent Posts</h3>
+                    <p>More articles coming soon...</p>
+                </aside>
             </div>
         </div>
     </div>
 
+    <!-- 9. MATERIAL DESIGN -->
+    <div id="material" class="design-section material">
+        <div class="design-label">
+            <h3>9. Material Design</h3>
+            <p>Google's design system with elevation and motion</p>
+        </div>
+        <div class="app-bar">
+            <h1>Chanezon on AI</h1>
+        </div>
+        <div class="container">
+            <article>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <div class="chip">AI</div>
+                <div class="chip">DevRel</div>
+                <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+            </article>
+        </div>
+        <div class="fab">+</div>
+    </div>
+
+    <!-- 10. FROSTED MINIMALISM -->
+    <div id="frosted" class="design-section frosted">
+        <div class="design-label">
+            <h3>10. Frosted Minimalism</h3>
+            <p>Ultra-minimal with subtle frosted glass effects</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+            <article>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <div class="post-content">
+                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                </div>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+            </article>
+        </div>
+    </div>
+
+    <!-- 11. GRADIENTED NEOFLAT -->
+    <div id="neoflat" class="design-section neoflat">
+        <div class="design-label">
+            <h3>11. Gradiented Neoflat</h3>
+            <p>Modern flat design with vibrant gradients</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+            <article>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <div class="post-content">
+                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                </div>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+            </article>
+        </div>
+    </div>
+
+    <!-- 12. DARK MINIMAL / DARK LUXE -->
+    <div id="dark-luxe" class="design-section dark-luxe">
+        <div class="design-label">
+            <h3>12. Dark Minimal / "Dark Luxe"</h3>
+            <p>Sophisticated dark theme with luxury accents</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+            <article>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <div class="post-content">
+                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                </div>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+            </article>
+        </div>
+    </div>
+
+    <!-- 13. MONOCHROME -->
+    <div id="monochrome" class="design-section monochrome">
+        <div class="design-label">
+            <h3>13. Monochrome Design</h3>
+            <p>Pure black and white with strong contrast</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Header" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+            <article>
+                <h2>Reinventing Developer Relations in the age of AI Agents</h2>
+                <div class="post-date">November 7, 2025</div>
+                <div class="post-content">
+                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf.</p>
+                </div>
+                <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+            </article>
+        </div>
+    </div>
+
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('.design-nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
