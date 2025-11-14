@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanezon on AI - Blog Design Options</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        /* Navigation between designs */
+        .design-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #000;
+            color: #fff;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .design-nav h2 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .design-nav nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .design-nav nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Design Section Container */
+        .design-section {
+            margin-top: 60px;
+            min-height: 100vh;
+            background: #fff;
+            border-bottom: 4px solid #000;
+        }
+
+        .design-label {
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .design-label h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .design-label p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* ============================================
+           DESIGN 1: CLASSIC MINIMAL (Medium-inspired)
+           ============================================ */
+        .design-1 {
+            background: #fff;
+            padding: 3rem 1rem;
+        }
+
+        .design-1 .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .design-1 header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 3rem;
+        }
+
+        .design-1 .header-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+
+        .design-1 h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+        }
+
+        .design-1 .tagline {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .design-1 .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .design-1 .social-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .design-1 .social-links a:hover {
+            color: #000;
+        }
+
+        .design-1 article {
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .design-1 article:last-child {
+            border-bottom: none;
+        }
+
+        .design-1 article h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .design-1 article h2 a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .design-1 article h2 a:hover {
+            opacity: 0.7;
+        }
+
+        .design-1 .post-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .design-1 .post-content {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: #333;
+        }
+
+        .design-1 .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .design-1 .post-image {
+            width: 100%;
+            height: auto;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        /* ============================================
+           DESIGN 2: MODERN SWISS TYPOGRAPHY
+           ============================================ */
+        .design-2 {
+            background: #fff;
+            padding: 0;
+        }
+
+        .design-2 .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            min-height: 100vh;
+            gap: 0;
+        }
+
+        .design-2 .sidebar {
+            background: #000;
+            color: #fff;
+            padding: 3rem 2rem;
+            position: sticky;
+            top: 60px;
+            height: calc(100vh - 60px);
+        }
+
+        .design-2 .sidebar h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .design-2 .sidebar .tagline {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        .design-2 .sidebar .header-image {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: grayscale(100%) contrast(1.2);
+        }
+
+        .design-2 .sidebar nav a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+            transition: opacity 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .design-2 .sidebar nav a:hover {
+            opacity: 0.6;
+        }
+
+        .design-2 .main-content {
+            padding: 3rem 4rem;
+            background: #fff;
+        }
+
+        .design-2 article {
+            margin-bottom: 5rem;
+            max-width: 700px;
+        }
+
+        .design-2 article h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .design-2 article h2 a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .design-2 .post-meta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #999;
+            margin-bottom: 2rem;
+        }
+
+        .design-2 .post-content {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .design-2 .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .design-2 .post-image {
+            width: 100%;
+            height: auto;
+            margin: 2rem 0;
+        }
+
+        /* ============================================
+           DESIGN 3: BRUTALIST MINIMAL
+           ============================================ */
+        .design-3 {
+            background: #fff;
+            padding: 0;
+        }
+
+        .design-3 .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .design-3 header {
+            margin-bottom: 4rem;
+            border: 3px solid #000;
+            padding: 2rem;
+        }
+
+        .design-3 h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .design-3 .tagline {
+            font-size: 1rem;
+            line-height: 1.5;
+            border-left: 4px solid #000;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .design-3 .header-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #000;
+            margin-bottom: 1rem;
+        }
+
+        .design-3 .social-links {
+            display: flex;
+            gap: 0;
+        }
+
+        .design-3 .social-links a {
+            background: #000;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-weight: 700;
+            border-right: 2px solid #fff;
+            transition: all 0.2s;
+        }
+
+        .design-3 .social-links a:hover {
+            background: #fff;
+            color: #000;
+            border: 2px solid #000;
+        }
+
+        .design-3 article {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            border: 2px solid #000;
+            background: #fff;
+        }
+
+        .design-3 article h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .design-3 article h2 a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 3px solid #000;
+        }
+
+        .design-3 article h2 a:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .design-3 .post-date {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 0.25rem 0.5rem;
+        }
+
+        .design-3 .post-content {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .design-3 .post-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .design-3 .post-image {
+            width: 100%;
+            height: auto;
+            border: 3px solid #000;
+            margin: 2rem 0;
+        }
+
+        /* ============================================
+           DESIGN 4: JAPANESE MINIMAL
+           ============================================ */
+        .design-4 {
+            background: #fafafa;
+            padding: 0;
+        }
+
+        .design-4 .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .design-4 header {
+            text-align: center;
+            margin-bottom: 5rem;
+            padding-bottom: 3rem;
+            position: relative;
+        }
+
+        .design-4 header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: #000;
+        }
+
+        .design-4 .header-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 2px;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .design-4 h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .design-4 .tagline {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .design-4 .social-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .design-4 .social-links a {
+            color: #000;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: opacity 0.3s;
+            position: relative;
+        }
+
+        .design-4 .social-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #000;
+            transition: width 0.3s;
+        }
+
+        .design-4 .social-links a:hover::after {
+            width: 100%;
+        }
+
+        .design-4 article {
+            margin-bottom: 5rem;
+            background: #fff;
+            padding: 3rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .design-4 article h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .design-4 article h2 a {
+            color: #000;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .design-4 article h2 a:hover {
+            opacity: 0.6;
+        }
+
+        .design-4 .post-date {
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .design-4 .post-content {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            color: #444;
+        }
+
+        .design-4 .post-content p {
+            margin-bottom: 1.8rem;
+        }
+
+        .design-4 .post-image {
+            width: 100%;
+            height: auto;
+            margin: 2rem 0;
+            opacity: 0.95;
+        }
+
+        /* ============================================
+           DESIGN 5: EDITORIAL MAGAZINE STYLE
+           ============================================ */
+        .design-5 {
+            background: #fff;
+            padding: 0;
+        }
+
+        .design-5 .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .design-5 header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            align-items: center;
+        }
+
+        .design-5 .header-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .design-5 .tagline {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .design-5 .social-links a {
+            color: #000;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .design-5 .social-links a:hover {
+            opacity: 0.6;
+        }
+
+        .design-5 .header-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .design-5 .posts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .design-5 article {
+            margin-bottom: 2rem;
+        }
+
+        .design-5 article h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+        }
+
+        .design-5 article h2 a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .design-5 article h2 a:hover {
+            opacity: 0.7;
+        }
+
+        .design-5 .post-date {
+            font-size: 0.85rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .design-5 .post-content {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .design-5 .post-content p {
+            margin-bottom: 1.3rem;
+        }
+
+        .design-5 .post-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .design-2 .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .design-2 .sidebar {
+                position: relative;
+                top: 0;
+                height: auto;
+            }
+
+            .design-5 header {
+                grid-template-columns: 1fr;
+            }
+
+            .design-5 .posts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .design-nav {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .design-nav nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .design-1 h1,
+            .design-3 h1 {
+                font-size: 2rem;
+            }
+
+            .design-5 .header-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .design-2 .main-content {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="design-nav">
+        <h2>Chanezon on AI - Design Options</h2>
+        <nav>
+            <a href="#design-1">Classic Minimal</a>
+            <a href="#design-2">Swiss Typography</a>
+            <a href="#design-3">Brutalist</a>
+            <a href="#design-4">Japanese</a>
+            <a href="#design-5">Editorial</a>
+        </nav>
+    </div>
+
+    <!-- DESIGN 1: CLASSIC MINIMAL -->
+    <div id="design-1" class="design-section design-1">
+        <div class="design-label">
+            <h3>Design 1: Classic Minimal</h3>
+            <p>Inspired by Medium - Focus on readability with clean typography and ample whitespace</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="https://github.com/chanezon">GitHub</a>
+                    <a href="https://www.linkedin.com/in/chanezon/">LinkedIn</a>
+                </div>
+            </header>
+
+            <article>
+                <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
+                <span class="post-date">7 November 2025</span>
+                <div class="post-content">
+                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful: it requires us to reinvent our jobs as developers, and as a consequence, we also need to reinvent the Developer Relations discipline.</p>
+                    <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents Presentation" class="post-image">
+                    <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
+                </div>
+            </article>
+
+            <article>
+                <h2><a href="#">January AI Reading List</a></h2>
+                <span class="post-date">22 January 2025</span>
+                <div class="post-content">
+                    <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities, with particular focus on reasoning and planning abilities.</p>
+                    <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm Phases" class="post-image">
+                    <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- DESIGN 2: MODERN SWISS TYPOGRAPHY -->
+    <div id="design-2" class="design-section design-2">
+        <div class="design-label">
+            <h3>Design 2: Modern Swiss Typography</h3>
+            <p>Grid-based layout with strong typography and systematic organization</p>
+        </div>
+        <div class="grid-container">
+            <aside class="sidebar">
+                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
+                <h1>Chanezon<br>on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <nav>
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">About</a>
+                    <a href="#">Archive</a>
+                </nav>
+            </aside>
+            <main class="main-content">
+                <article>
+                    <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
+                    <div class="post-meta">7 November 2025 • DevRel • AI Agents</div>
+                    <div class="post-content">
+                        <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful: it requires us to reinvent our jobs as developers, and as a consequence, we also need to reinvent the Developer Relations discipline.</p>
+                        <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+                        <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <h2><a href="#">January AI Reading List</a></h2>
+                    <div class="post-meta">22 January 2025 • Reading List • AI</div>
+                    <div class="post-content">
+                        <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities, with particular focus on reasoning and planning abilities.</p>
+                        <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm" class="post-image">
+                        <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+
+    <!-- DESIGN 3: BRUTALIST MINIMAL -->
+    <div id="design-3" class="design-section design-3">
+        <div class="design-label">
+            <h3>Design 3: Brutalist Minimal</h3>
+            <p>Bold typography, strong borders, and high contrast for maximum impact</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+
+            <article>
+                <span class="post-date">7 Nov 2025</span>
+                <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
+                <div class="post-content">
+                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful: it requires us to reinvent our jobs as developers, and as a consequence, we also need to reinvent the Developer Relations discipline.</p>
+                    <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+                    <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
+                </div>
+            </article>
+
+            <article>
+                <span class="post-date">22 Jan 2025</span>
+                <h2><a href="#">January AI Reading List</a></h2>
+                <div class="post-content">
+                    <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities, with particular focus on reasoning and planning abilities.</p>
+                    <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm" class="post-image">
+                    <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- DESIGN 4: JAPANESE MINIMAL -->
+    <div id="design-4" class="design-section design-4">
+        <div class="design-label">
+            <h3>Design 4: Japanese Minimal</h3>
+            <p>Zen-inspired design with subtle elegance and emphasis on negative space</p>
+        </div>
+        <div class="container">
+            <header>
+                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
+                <h1>Chanezon on AI</h1>
+                <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </header>
+
+            <article>
+                <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
+                <span class="post-date">November 7, 2025</span>
+                <div class="post-content">
+                    <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful: it requires us to reinvent our jobs as developers, and as a consequence, we also need to reinvent the Developer Relations discipline.</p>
+                    <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+                    <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
+                </div>
+            </article>
+
+            <article>
+                <h2><a href="#">January AI Reading List</a></h2>
+                <span class="post-date">January 22, 2025</span>
+                <div class="post-content">
+                    <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities, with particular focus on reasoning and planning abilities.</p>
+                    <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm" class="post-image">
+                    <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- DESIGN 5: EDITORIAL MAGAZINE STYLE -->
+    <div id="design-5" class="design-section design-5">
+        <div class="design-label">
+            <h3>Design 5: Editorial Magazine Style</h3>
+            <p>Two-column magazine layout with visual hierarchy and balanced composition</p>
+        </div>
+        <div class="container">
+            <header>
+                <div class="header-content">
+                    <h1>Chanezon on AI</h1>
+                    <p class="tagline">Patrick Chanezon on AI, software development, cloud, containers and developer relations</p>
+                    <div class="social-links">
+                        <a href="#">GitHub</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+                <img src="../assets/img/blog-header.jpg" alt="Patrick Chanezon" class="header-image">
+            </header>
+
+            <div class="posts-grid">
+                <article>
+                    <img src="../assets/img/2025-June-13-Chanezon-Agent.jpg" alt="AI Agents" class="post-image">
+                    <h2><a href="#">Reinventing Developer Relations in the age of AI Agents</a></h2>
+                    <span class="post-date">November 7, 2025</span>
+                    <div class="post-content">
+                        <p>I've been a developer for 40 years, practicing Developer Relations for 20, AI is the fourth technology innovation wave I have had the privilege to surf (after client/server, web, cloud/mobile) and it's probably the most profound and impactful.</p>
+                        <p>This post is about the necessary reinvention of the Developer Relations discipline in the age of AI Agents across 3 dimensions: helping developers learn how to become productive managers of agents, helping agents discover and use your services to build applications, and transforming Developer Relations workflows with AI.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <img src="../assets/img/frontier_firm_phases.png" alt="Frontier Firm" class="post-image">
+                    <h2><a href="#">January AI Reading List</a></h2>
+                    <span class="post-date">January 22, 2025</span>
+                    <div class="post-content">
+                        <p>A curated collection of the most interesting AI papers, articles, and developments from January 2025. This month has seen significant advances in AI agent capabilities.</p>
+                        <p>Key themes include the evolution of AI agents in enterprise settings, improvements in model context windows, and the emergence of new protocols for agent-to-agent communication.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.design-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
