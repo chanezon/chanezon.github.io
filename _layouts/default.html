@@ -21,26 +21,27 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-
+        <div class="header-content">
+          <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+          <p>{{ site.description | default: site.github.project_tagline }}</p>
+          <p class="view"><a href="{{ site.github.owner_url }}">GitHub</a> <a href="https://www.linkedin.com/in/chanezon/recent-activity/all/">LinkedIn</a></p>
+        </div>
         <img src="/assets/img/blog-header.jpg" alt="Header" />
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-        <p class="view"><a href="{{ site.github.owner_url }}">GitHub</a> - <a href="https://www.linkedin.com/in/chanezon/recent-activity/all/">LinkedIn</a></p>
       </header>
       <section>
-
-      {{ content }}
-      {% if page.isindex %}
-        {% for post in site.posts %}
-            <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-            <p><b>{{ post.date | date: "%-d %B %Y" }}</b></p>
-            {{ post.content }}
-        {% endfor %}
-      {% endif %}      
-
+        <main>
+          {{ content }}
+          {% if page.isindex %}
+            {% for post in site.posts %}
+                <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                <p><b>{{ post.date | date: "%-d %B %Y" }}</b></p>
+                {{ post.content }}
+            {% endfor %}
+          {% endif %}
+        </main>
       </section>
       <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Hosted on GitHub Pages</small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
