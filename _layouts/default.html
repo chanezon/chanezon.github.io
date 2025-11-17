@@ -20,25 +20,55 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <header class="header-wrapper">
+        <!-- Full-width image banner at top -->
+        <div class="header-banner">
+          <img src="/assets/img/blog-header.jpg" alt="Header" />
+        </div>
+        
+        <!-- Title and nav content underneath -->
         <div class="header-content">
           <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <p class="view"><a href="{{ site.github.owner_url }}">GitHub</a> <a href="https://www.linkedin.com/in/chanezon/recent-activity/all/">LinkedIn</a></p>
+          <p class="tagline">{{ site.description | default: site.github.project_tagline }}</p>
+          <p class="social-links"><a href="{{ site.github.owner_url }}">GitHub</a> <a href="https://www.linkedin.com/in/chanezon/recent-activity/all/">LinkedIn</a></p>
         </div>
-        <img src="/assets/img/blog-header.jpg" alt="Header" />
       </header>
       <section>
         <main>
           {{ content }}
           {% if page.isindex %}
-            {% for post in site.posts %}
-                <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                <p><b>{{ post.date | date: "%-d %B %Y" }}</b></p>
-                {{ post.content }}
-            {% endfor %}
+            {%- assign latest_post = site.posts.first -%}
+            <article class="latest-post">
+              <h1><a href="{{ latest_post.url }}">{{ latest_post.title }}</a></h1>
+              <p><b>{{ latest_post.date | date: "%-d %B %Y" }}</b></p>
+              {{ latest_post.content }}
+            </article>
           {% endif %}
         </main>
+
+        <aside class="sidebar">
+          <nav class="post-list" aria-label="Blog posts">
+            <h3>Posts</h3>
+            <ul>
+              {% comment %} Determine the active post url for highlighting {# index should highlight latest #}
+              {% endcomment %}
+              {% if page.isindex %}
+                {% assign active_url = site.posts.first.url %}
+              {% else %}
+                {% assign active_url = page.url %}
+              {% endif %}
+
+              {% for post in site.posts %}
+                <li class="post-item{% if post.url == active_url %} active{% endif %}">
+                  <a href="{{ post.url }}" {% if post.url == active_url %}aria-current="page"{% endif %}>
+                    {{ post.title }}
+                  </a>
+                  <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </aside>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages</small></p>
