@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "Measuring Agent Experience: open sourcing the platform we use, Project Scope, and an AX practitioner handbook"
+tags: AI agents devrel benchmarks evaluations AX DevAX
+---
+
+I lead Microsoft Developer Relations and one of my primary responsibility is to define our team's mission (why), vision (where), strategy (what) and culture (how), in collaboration with many stakeholders across the company, and with the influence of many outside. Our mission has been quite stable over the past 5 years, and is very aligned with Microsoft's mission: Help technology communities achieve more with AI on Microsoft Cloud.​ Our culture is also quite stable. Strategy evolves quickly with quarterly revisions, to align with product teams and a fast evolving competitive landscape. 18 months ago, with the drastic change AI Agents introduced I shared with my team an updated vision and a few months later shared some aspects of it in a public blog post about [Reinventing Developer Relations in the age of AI Agents]{% post_url 2025-11-07-devrel-evolution-with-ai-agents %}, with 3 dimensions: helping developers learn how to become productive managers of agents, transforming Developer Relations workflows with AI, and helping agents discover and use your services to build applications, treating AI Agents as a new type of customer of your developer services, and developing a new discipline of Agent Experience (AX).
+
+In the post I gave details and examples about the first 2 aspects, but for AX I just set the problem and suggested that *"in order to improve something you need to measure it: in the same way that Developer Relations uses metrics to measures developer experience, we need to define metrics for AX and build benchmarking tools to understand what AI Coding Agent Experience looks like with your company’s services."*. My team and many of our colleagues across many Microsoft product teams have been busy in the past year working on this agenda. We have co-evolved the methodology to measure AX in a way that is helpful to improve our products, and the tooling, [building and rebuilding](https://wiki.c2.com/?PlanToThrowOneAway) our tool as we learned what worked and what we needed. From the beginning we realized we were probably ahead of the curve in this area, and that everyone building software for developers would need this, so we built it from day one with open source technologies, on top of Kubernetes and KEDA, with the goals of open sourcing it at some point.
+
+Today we're open sourcing the [The AX Practitioner Playbook](https://microsoft.github.io/agent-experience/), describing our metodology to measure AX, and [Scope](https://opensource.microsoft.com/blog/2026/10/19/introducing-scope-open-source-evaluation-for-ai-coding-agents/), an open-source evaluation system for AI coding agents. Scope lets you evaluate how AI Coding Agents are implementing specific scenarios, across a matrix of (Harness x Models x skills/Plugins/MCP x OS), with multi-turn interactions and an LLM judge to evluate the results. [Scope is easy to deploy on AKS](https://microsoft.github.io/scope/self-hosting/overview/), we have been running it internally at Microsoft for months. In terms of governance, if the project is successful, we're planning to donate it to AIIF or CNCF so it can be grown as a shared common system for the industry.
+
+Learn more about [Scope](https://microsoft.github.io/scope/), contribute or log issues in the [repository](https://github.com/microsoft/scope), and join the talk Jay Gordon and I give at AI DevCon NYC on November 4 [AI Agents Are Your New Users](https://lnkd.in/p/gSGiKEGY).
+
+
+
+
+
